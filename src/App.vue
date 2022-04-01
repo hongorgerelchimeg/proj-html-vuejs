@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <max-c-header
+    />
+    <max-c-main />
+    <max-c-footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MaxCFooter from './components/MaxCFooter.vue'
+import MaxCHeader from './components/MaxCHeader.vue'
+import MaxCMain from './components/MaxCMain.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MaxCHeader,
+    MaxCMain,
+    MaxCFooter
+    
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "../public/styles/main";
+
 </style>
