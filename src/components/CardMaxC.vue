@@ -45,6 +45,7 @@ export default {
 
 .card {
     position: relative;
+    min-width: 30%;
     background-color: $White;
     text-align: start;
     padding-bottom: 4rem;

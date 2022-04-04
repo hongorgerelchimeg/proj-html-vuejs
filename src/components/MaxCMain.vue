@@ -58,10 +58,10 @@
                 </div>
                 <div class="section section-3">
                     <div class="content-holder">
-                        <div class="left-side-holder ">
+                        <div class="left-side-holder">
                             <div class="img-holder">
                                 <img :src="require('../../public/img/stock-full-hd-11-670x450.jpg')" alt="">
-                                <div class="img-absolute center">
+                                <div class="img-absolute center call-video-player">
                                     <img :src="require('../../public/img/icon-youtube-play.png')" alt="youtube.logo" width="60px">
                                 </div>
                                 <icon-parallax :ParalaxIcon="arrParalaxIcons[1]"/>
@@ -122,6 +122,30 @@ export default {
         return {
             arrCard: [
                 {
+                    image: cardImage1,
+                    price: '$40.00',
+                    title: 'Learning to Write as a Professional Author',
+                    counter1: '20 Lessons',
+                    counter2: '56 Students',
+                    cardTagShow: false,
+                },
+                {
+                    image: cardImage2,
+                    price: '$0.00',
+                    title: 'Customer-centric Info-Tech Strategies',
+                    counter1: '24 Lessons',
+                    counter2: '769 Students',
+                    cardTagShow: true,
+                },
+                {
+                    image: cardImage3,
+                    price: '$19.00',
+                    title: 'Open Programming Courses for Everyone: Python',
+                    counter1: '17 Lessons',
+                    counter2: '62 Students',
+                    cardTagShow: false,
+                },
+                  {
                     image: cardImage1,
                     price: '$40.00',
                     title: 'Learning to Write as a Professional Author',
@@ -310,6 +334,7 @@ export default {
     gap: 1.5rem;
     align-items: stretch;
     margin-bottom: 10vh;
+    overflow: auto;
 }
 
 // Utility
@@ -329,6 +354,9 @@ export default {
 }
 .text-center {
     text-align: center;
+}
+.call-video-player {
+    cursor: pointer;
 }
 
 // Margin
