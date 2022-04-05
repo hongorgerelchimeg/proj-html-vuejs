@@ -15,6 +15,12 @@
                     <div class="text">
                     <a target="_blank" href="mailto:support@maxcoach.com">support@maxcoach.com</a> 
                     </div>
+                    <div class="social-links">
+                        <font-awesome-icon icon="fa-brands fa-instagram" />
+                        <font-awesome-icon icon="fa-brands fa-twitter" />
+                        <font-awesome-icon icon="fa-brands fa-linkedin" />
+                        <font-awesome-icon icon="fa-brands fa-youtube" />
+                    </div>
 
                 </div>
                 <div class="center">
@@ -58,6 +64,11 @@
                     </div>
                 </div>
             </div>
+            <div class="container text-center trade-marks">
+                <a href="#!">
+                    © 2020 Maxcoach. All Rights Reserved
+                </a>
+            </div>
         </div>
     </footer>
     
@@ -97,6 +108,7 @@ export default {
     }
     .left {
         width: 50%;
+        margin-left: 2rem;
     }
     .center,.right {
         margin-left: 2rem;
@@ -118,7 +130,33 @@ export default {
     }
     .text-inline {
         display: inline-block;
-    }  
+    }
+    .social-links {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-size: 1.5rem;
+        & svg {
+            transition: color .5s ease;
+        }
+        & >:hover  {
+            color: $White;
+            cursor: pointer;
+        }
+    }
+}
+.trade-marks {
+    width: 100%;
+    margin: 3rem auto 0;
+    text-align: center;
+    a {
+        color: $FooterText;
+        
+    }
+}
+.text-center {
+    
 }
 
 </style>
