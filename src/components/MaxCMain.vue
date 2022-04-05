@@ -87,13 +87,87 @@
                             <div class="card-holder">
                                     <card-max-c v-for="(card, index) in arrCard" :key="index" :CardProp="card" />
                             </div>
+                            <div class="under-card-text">
+                                <span>Control your personal preference settings to get notified about appropriate courses. <a href="#!">View all courses</a></span>
+                            </div>
+                            
 
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="100">
+                    <path class="fill-divider" d="M 0 0 L0 100 L100 100 L100 0 Q 50 200 0 0"></path>
+                </svg>
             </div>
         </div>
+        <div class="container-fluid container-gradient-triple">
+            <div class="container">
+                <div class="section section-5">
+                    <div class="content-holder">
+                        <div class="left-side-holder right-padding">
+                            <text-card :TextCardContent="arrTextCardContent[2]" />
+                        </div>
+                        <div class="right-side-holder">
+                            
+                            <testimonials-max-c />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section section-6">
+                    <div class="content-holder aling-center">
+                        <div class="left-side-holder">
+                           <div class="img-holder">
+                               <img src="../../public/img/home-3-team-image.png" alt="team">
+                               <icon-parallax :ParalaxIcon="arrParalaxIcons[1]"/>
+                           </div>
+                        </div>
+                        <div class="right-side-holder left-padding">
+                            
+                            <text-card :TextCardContent="arrTextCardContent[3]" />
+
+                            <div class="btn-holder background-green">
+                                <button class="btn">Get Free Guide</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid container-grey">
+            <div class="container">
+                <div class="section section-7">
+                    <div class="content-holder padding-top">
+                        <div class="full text-center text-capitalize">
+                            <span>read for more joyment</span>
+                            <div class="title">
+                                <span>Latest From</span>
+                                <div class="styled-text">
+                                    <span> Our Blogs</span>
+                                </div>
+                            </div>
+
+                            <div class="card-holder">
+                                    <card-max-c v-for="(card, index) in arrCard" :key="index" :CardProp="card" />
+                            </div>
+                            <div class="under-card-text">
+                                <span>Control your personal preference settings to get notified about appropriate courses. <a href="#!">View all courses</a></span>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </main>
     
      
@@ -114,9 +188,10 @@ import cardImage2 from '../../public/img/stock-full-hd-03-480x298.jpg'
 import cardImage3 from '../../public/img/stock-full-hd-04-480x298.jpg'
 // import icon6 from '../../public/img/maxcoach-shape-05-100x100.png'
 import anime from 'animejs';
+import TestimonialsMaxC from './TestimonialsMaxC.vue'
 
 export default {
-    components: { TextCard, IconParallax, CardMaxC },
+    components: { TextCard, IconParallax, CardMaxC, TestimonialsMaxC },
     name: 'MaxCMain',
     data () {
         return {
@@ -205,6 +280,28 @@ export default {
                     CallToActionLink: ' Download free guidebook',
                     Link: '#!',
                 },
+                {
+                    subTitle: 'TESTIMONIALS',
+                    subTitleBold: '',
+                    Title: 'Why Do People',
+                    Title2: ' *Hearts*',
+                    Title3: 'Us?',
+                    Paragraph: "Seeking for verbals of our service quality? Find them here. Everything is transparent and straightforward for your sense of jusitifcation.",
+                    CallToAction: '',
+                    CallToActionLink: ' View All',
+                    Link: '#!',
+                },
+                {
+                    subTitle: 'EVERYTHING IN',
+                    subTitleBold: 'MAXCOACH',
+                    Title: 'We’re Here To',
+                    Title2: 'Transform',
+                    Title3: 'You!',
+                    Paragraph: "As learners, people can enjoy great companionship from MaxCoach mentors and educators. We can help you develop and grow at your best.",
+                    CallToAction: '',
+                    CallToActionLink: '',
+                    Link: '#!',
+                },
 
             ],
             objCounter: {
@@ -249,6 +346,19 @@ export default {
     background: rgb(246,246,246);
     background: linear-gradient(0deg, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 100%);
 }
+.container-gradient-reverse {
+    background: rgba(255,255,255,1);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%,);
+}
+.container-gradient-triple {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(240,240,240,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.container-grey {
+    background: rgb(246,246,246);
+}
+
 .hero-section {
     position: relative;
     height: 70vh;
@@ -278,6 +388,14 @@ export default {
         display: flex;
         .full {
             flex-basis: 100%;
+            .under-card-text {
+                margin: 0 auto;
+                text-align: center;
+                width: 50%;
+                a {
+                    text-decoration: underline;
+                }
+            }
         }
         .left-side-holder {
             flex-basis: 40%;
@@ -291,6 +409,17 @@ export default {
         .left-padding {
             padding-left: 4rem;
         }
+    }
+    
+}
+.divider {
+    width: 100%;
+    height: 100px;
+    svg {
+        width: 100%;
+        fill: white;
+    }
+    .fill-divider {
     }
 }
 .img-holder {
@@ -345,10 +474,10 @@ export default {
     gap: 1.5rem;
     align-items: stretch;
     margin-bottom: 10vh;
-    overflow: auto;
+    overflow: hidden;
 }
 
-.section-3 {
+.section-3,.section-6 {
     .content-holder {
         .left-side-holder {
         flex-basis: 60%;
@@ -359,6 +488,15 @@ export default {
     }
   
 }
+
+.section-5 {
+    padding: 6rem 0 8rem;
+   
+}
+.section-6 {
+    padding: 0rem 0 8rem;
+}
+
 
 // Utility
 .title {
@@ -393,8 +531,26 @@ export default {
     cursor: pointer;
 }
 
-// Margin
+.aling-center {
+    align-items: center;
+}
 
+.background-green {
+    margin-top: 2rem;
+    button {
+        background-color: $MainGreen;
+        color: $White;
+        &:hover {
+            background-color: $White;
+            color: $MainGreen;
+        }
+    }
+}
+
+// Margin
+.padding-top {
+    padding-top: 15vh;
+}
 span+.title {
     margin-top: .6rem;
 }
