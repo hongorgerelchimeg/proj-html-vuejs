@@ -311,30 +311,6 @@ export default {
                     counter2: '62 Students',
                     cardTagShow: false,
                 },
-                  {
-                    image: cardImage1,
-                    price: '$40.00',
-                    title: 'Learning to Write as a Professional Author',
-                    counter1: '20 Lessons',
-                    counter2: '56 Students',
-                    cardTagShow: false,
-                },
-                {
-                    image: cardImage2,
-                    price: '$0.00',
-                    title: 'Customer-centric Info-Tech Strategies',
-                    counter1: '24 Lessons',
-                    counter2: '769 Students',
-                    cardTagShow: true,
-                },
-                {
-                    image: cardImage3,
-                    price: '$19.00',
-                    title: 'Open Programming Courses for Everyone: Python',
-                    counter1: '17 Lessons',
-                    counter2: '62 Students',
-                    cardTagShow: false,
-                }
             ],
             arrParalaxIcons: [
                 {
