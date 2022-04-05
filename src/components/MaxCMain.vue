@@ -59,8 +59,8 @@
                 <div class="section section-3">
                     <div class="content-holder">
                         <div class="left-side-holder">
-                            <div class="img-holder">
-                                <img :src="require('../../public/img/stock-full-hd-11-670x450.jpg')" alt="">
+                            <div class="img-holder video-player-holder">
+                                <img style="video-cover" :src="require('../../public/img/stock-full-hd-11-670x450.jpg')" alt="video cover">
                                 <div class="img-absolute center call-video-player">
                                     <img :src="require('../../public/img/icon-youtube-play.png')" alt="youtube.logo" width="60px">
                                 </div>
@@ -135,7 +135,7 @@ export default {
                     title: 'Customer-centric Info-Tech Strategies',
                     counter1: '24 Lessons',
                     counter2: '769 Students',
-                    cardTagShow: true,
+                    cardTagShow: false,
                 },
                 {
                     image: cardImage3,
@@ -217,6 +217,13 @@ export default {
         }
     },
     methods: {
+        freeTagShowCheck () {
+        this.arrCard.forEach(card => {
+            if(card.price === "$0.00") {
+            return card.cardTagShow = true;
+            } 
+        })
+        }
     },
     created () {
         anime({
@@ -229,6 +236,9 @@ export default {
             offset: '50%',
             easing: 'linear',
         });
+    },
+    mounted () {
+        this.freeTagShowCheck();
     }
 }
 </script>
@@ -241,7 +251,7 @@ export default {
 }
 .hero-section {
     position: relative;
-    height: 60vh;
+    height: 70vh;
     background-image: url('../../public/img/home-3-hero-bg.jpg');
     background-position: center;
     background-size: cover;
@@ -252,8 +262,8 @@ export default {
         left: 50%;
         transform: translate(-50%, -50%);
         .sub-title {
-            font-weight: 600;
-            font-size: 1.5rem;
+            font-weight: 700;
+            font-size: 2.2rem;
             line-height: 1;
         }
         .call-to-action {
@@ -270,16 +280,16 @@ export default {
             flex-basis: 100%;
         }
         .left-side-holder {
-            flex-basis: 50%;
+            flex-basis: 40%;
         }
         .right-side-holder {
-            flex-basis: 50%;
+            flex-basis: 60%;
         }
         .right-padding {
-            padding-right: 5rem;
+            padding-right: 4rem;
         }
         .left-padding {
-            padding-left: 5rem;
+            padding-left: 4rem;
         }
     }
 }
@@ -319,7 +329,8 @@ export default {
     gap: 4rem;
     .counter {
         color: $MainGreen;
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 700;
     }
     p {
         text-transform: uppercase;
@@ -337,9 +348,21 @@ export default {
     overflow: auto;
 }
 
+.section-3 {
+    .content-holder {
+        .left-side-holder {
+        flex-basis: 60%;
+        }
+        .right-side-holder {
+            flex-basis: 40%;
+        }
+    }
+  
+}
+
 // Utility
 .title {
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: $MainBlack;
 }
@@ -354,6 +377,17 @@ export default {
 }
 .text-center {
     text-align: center;
+}
+.video-player-holder {
+    border-radius: 3%;
+    overflow: hidden;
+    
+    img {
+        transition: transform 2s ease;
+    }
+    img:hover {
+        transform: scale(1.2);
+    }
 }
 .call-video-player {
     cursor: pointer;

@@ -50,11 +50,13 @@ export default {
 
 <style lang="scss" scoped>
 ul {
+    margin-left: 2rem;
     width: 100%;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 2rem;
     li {
         margin-right: 1.5rem;
     }

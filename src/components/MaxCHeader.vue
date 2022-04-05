@@ -35,7 +35,7 @@ export default {
 @import "../../public/styles/main";
 header {
     width: 100%;
-    height: 8vh;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
     .nav-holder {
@@ -49,7 +49,7 @@ header {
         align-items: center;
         justify-content: center;
         .logo-dark {
-            max-height: 1.4rem;
+            max-height: 1.6rem;
         }
     }
     .right-side-utility {

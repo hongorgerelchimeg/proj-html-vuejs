@@ -1,6 +1,9 @@
 <template>
   <div class="card">
-      <img :src="CardProp.image" alt="">
+      <div class="img-holder">
+          <img :src="CardProp.image" alt="">
+      </div>
+      
       <div class="text-content">
             <div class="price">
             <span>{{CardProp.price}}</span>
@@ -49,11 +52,15 @@ export default {
     background-color: $White;
     text-align: start;
     padding-bottom: 4rem;
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
     cursor: pointer;
     .text-content {
         padding: 0 2rem;
+    }
+    .img-holder {
+        height: 200px;
+        overflow: hidden;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
     }
     & img {
         width: 100%;
@@ -61,6 +68,10 @@ export default {
         object-fit: cover;
         border-top-right-radius: 6px;
         border-top-left-radius: 6px;
+        transition: transform 2s ease;
+    }
+    &.card:hover img{
+        transform: scale(1.2);
     }
     .price {
         padding-top: 1rem;
@@ -68,12 +79,12 @@ export default {
     .price span {
         
         color: $MainGreen;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 700;
     }
     .card-title {
         color: $MainBlack;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
     }
 
