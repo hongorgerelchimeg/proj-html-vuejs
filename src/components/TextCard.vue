@@ -15,9 +15,9 @@
         <p>{{TextCardContent.Paragraph}}</p>
       </div>
       <div class="call-to-action">
-          <span>{{TextCardContent.CallToAction}}</span>
+          <span>{{TextCardContent.CallToAction}} </span>
           <div class="cta-link">
-              <a :href="TextCardContent.Link"> {{TextCardContent.CallToActionLink}}</a>
+              <a :href="TextCardContent.Link"> {{TextCardContent.CallToActionLink}} <font-awesome-icon icon="fa-solid fa-arrow-right-long" /></a>
           </div>
           
       </div>

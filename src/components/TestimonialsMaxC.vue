@@ -2,7 +2,7 @@
 <div class="testimonials">
     <div class="testimonials-holder testi1">
         <div class="title">
-            <span>Professional team of specialists and passionate mentors at reach</span>
+            <span>The MaxCoach team works really hard to ensure high level of quality</span>
         </div>
         <div class="paragraph">
             <span>I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.</span>

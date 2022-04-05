@@ -58,13 +58,30 @@ ul {
     justify-content: center;
     gap: 2rem;
     li {
-        margin-right: 1.5rem;
-    }
-    a {
-        
-        // &::after {
-        //     content: 
-        // }
-    }
+        margin-right: .8rem;
+        a {
+            position: relative;
+            &::after {
+                position: absolute;
+                right: -25%;
+                bottom: 25%;
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-top: 1px solid black;
+                transform: rotateZ(40deg);
+            }
+            &::before {
+                position: absolute;
+                right: -42%;
+                bottom: 25%;
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-top: 1px solid black;
+                transform: rotateZ(-40deg);
+            }
+        }
+    } 
 }
 </style>

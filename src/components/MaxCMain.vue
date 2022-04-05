@@ -1,6 +1,7 @@
 <template>
     <main>
         <div class="container-fluid container-gradient">
+            <!-- HERO SECTION -->
             <div class="section">
                 <div class="hero-section text-white">
                     <div class="hero-title">
@@ -9,12 +10,13 @@
                         </div>
                         <h1>Distant Mentoring Program</h1>
                         <div class="call-to-action">
-                            <button class="btn">Donwload free guidebook</button>
+                            <button class="btn">Donwload free guidebook <font-awesome-icon icon="fa-solid fa-arrow-right-long" /></button>
                         </div>
                     </div>
                 </div>
             </div>
-        
+
+            <!-- Work Culture Section 1  -->
             <div class="container ">
                 <div class="section section-1">
                     <div class="content-holder">
@@ -34,6 +36,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Animated Counter -->
                 <div class="section section-2">
                     <div class="counter-holder">
                         <div class="enrolled-learners">
@@ -56,11 +60,16 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Youtube Video Section 3 -->
                 <div class="section section-3">
                     <div class="content-holder">
                         <div class="left-side-holder">
-                            <div class="img-holder video-player-holder">
-                                <img style="video-cover" :src="require('../../public/img/stock-full-hd-11-670x450.jpg')" alt="video cover">
+                            <div class="img-holder ">
+                                <div class="video-player-holder">
+                                    <img style="video-cover" :src="require('../../public/img/stock-full-hd-11-670x450.jpg')" alt="video cover">
+                                </div>
+                                
                                 <div class="img-absolute center call-video-player">
                                     <img :src="require('../../public/img/icon-youtube-play.png')" alt="youtube.logo" width="60px">
                                 </div>
@@ -73,6 +82,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Latest Online Courses Section 4 -->
                 <div class="section section-4">
                     <div class="content-holder">
                         <div class="full text-center text-capitalize">
@@ -97,13 +108,18 @@
                 </div>
             </div>
 
+            <!-- svg Section Divider -->
             <div class="divider">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="100">
                     <path class="fill-divider" d="M 0 0 L0 100 L100 100 L100 0 Q 50 200 0 0"></path>
                 </svg>
             </div>
         </div>
+
+        <!-- New Container Background Gradient in 3 colors -->
         <div class="container-fluid container-gradient-triple">
+
+            <!-- Testimonials Section 5 -->
             <div class="container">
                 <div class="section section-5">
                     <div class="content-holder">
@@ -118,6 +134,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Get Guide Section 6  -->
             <div class="container">
                 <div class="section section-6">
                     <div class="content-holder aling-center">
@@ -141,12 +159,14 @@
             </div>
         </div>
 
+        <!-- New Container Background Grey -->
         <div class="container-fluid container-grey">
+            <!-- Blog Posts Section 7 -->
             <div class="container">
                 <div class="section section-7">
                     <div class="content-holder padding-top">
                         <div class="full text-center text-capitalize">
-                            <span>read for more joyment</span>
+                            <span class="text-uppercase">read for more joyment</span>
                             <div class="title">
                                 <span>Latest From</span>
                                 <div class="styled-text">
@@ -155,19 +175,58 @@
                             </div>
 
                             <div class="card-holder">
-                                    <card-max-c v-for="(card, index) in arrCard" :key="index" :CardProp="card" />
+                                    <blog-card-max-c v-for="(card, index) in arrBlogCard" :key="index" :BlogCardProp="card" />
                             </div>
-                            <div class="under-card-text">
-                                <span>Control your personal preference settings to get notified about appropriate courses. <a href="#!">View all courses</a></span>
-                            </div>
-                            
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- Container Background White -->
+        <div class="container-fluid">
+             <!-- Newsletters signup-->
+            <div class="container">
+                <div class="section section-newsletters">
+                    <div class="content-holder">
+                        <div class="full text-center text-capitalize">
+                            <div class="title">
+                                <span>Subscribe</span>
+                                <div class="styled-text">
+                                    <span> Newsletters</span>
+                                </div>
+                            </div>
+                            <span class="">Enter your email address to register to our newsletter subscription delivered on a regular basis!</span>
+
+                            <div class="form-holder">
+                                   <form role="newsletters" method="get" action="">
+                                        <input type="text" class="newsletters" placeholder="Enter your email">
+                                        <button type="submit" class="subscribe-btn">
+                                            Subscribe
+                                        </button>
+                                    </form>
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                    <!-- ICONS for Newsletter Section -->
+                    <div class="icon-absolute">
+                            <div class="icon-right">
+                                <img :src="require('../../public/img/maxcoach-shape-02.png')" alt="">
+                            </div>
+                             <div class="icon-right-2">
+                                <img :src="require('../../public/img/maxcoach-shape-09.png')" alt="">
+                            </div>
+                            <div class="icon-left">
+                                <img :src="require('../../public/img/maxcoach-shape-05-100x100.png')" alt="">
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
     
      
@@ -178,6 +237,11 @@
 import IconParallax from './IconParallax.vue'
 import TextCard from './TextCard.vue'
 import CardMaxC from './CardMaxC.vue'
+import anime from 'animejs';
+import TestimonialsMaxC from './TestimonialsMaxC.vue'
+import BlogCardMaxC from './BlogCardMaxC.vue'
+
+//IMAGES AND ICONS
 import icon1 from '../../public/img/maxcoach-shape-08.png'
 import icon2 from '../../public/img/maxcoach-shape-02.png'
 import icon3 from '../../public/img/maxcoach-shape-05-100x100.png'
@@ -186,15 +250,42 @@ import icon5 from '../../public/img/maxcoach-shape-05-150x150.png'
 import cardImage1 from '../../public/img/course-02-480x298.jpg'
 import cardImage2 from '../../public/img/stock-full-hd-03-480x298.jpg'
 import cardImage3 from '../../public/img/stock-full-hd-04-480x298.jpg'
-// import icon6 from '../../public/img/maxcoach-shape-05-100x100.png'
-import anime from 'animejs';
-import TestimonialsMaxC from './TestimonialsMaxC.vue'
+import blogCardImage1 from '../../public/img/artist-blog-03-480x325.jpeg'
+import blogCardImage2 from '../../public/img/artist-blog-01-480x325.jpg'
+import blogCardImage3 from '../../public/img/artist-blog-02-480x325.jpg'
+// ///////////////
+
 
 export default {
-    components: { TextCard, IconParallax, CardMaxC, TestimonialsMaxC },
+    components: { TextCard, IconParallax, CardMaxC, TestimonialsMaxC, BlogCardMaxC },
     name: 'MaxCMain',
     data () {
         return {
+            // Blog Card Array Simulation API
+            arrBlogCard: [
+                {
+                    image: blogCardImage1,
+                    category: 'ARTIST',
+                    title: 'Brush Strokes Energize Trees in Paintings',
+                    counter1: 'May 15, 2020',
+                    counter2: '688',
+                },
+                {
+                    image: blogCardImage2,
+                    category: 'ARTIST',
+                    title: 'Brush Strokes Energize Trees in Paintings',
+                    counter1: 'May 17, 2022',
+                    counter2: '601',
+                },
+                 {
+                    image: blogCardImage3,
+                    category: 'ARTIST',
+                    title: 'Learning to Write as a Professional Author',
+                    counter1: 'May 10, 2022',
+                    counter2: '397',
+                },
+            ],
+            // Card Array Simulation API
             arrCard: [
                 {
                     image: cardImage1,
@@ -257,6 +348,7 @@ export default {
                     icon3: icon3,
                 }
             ],
+            // Texts Array Simulation API
             arrTextCardContent: [
                 {
                     subTitle: 'EVERYTHING IN',
@@ -266,7 +358,7 @@ export default {
                     Title3: 'at MaxCoach',
                     Paragraph: "Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month.",
                     CallToAction: 'Have questions?',
-                    CallToActionLink: 'Get Free Guide',
+                    CallToActionLink: 'Get Free Guide ',
                     Link: '#!',
                 },
                 {
@@ -294,7 +386,7 @@ export default {
                 {
                     subTitle: 'EVERYTHING IN',
                     subTitleBold: 'MAXCOACH',
-                    Title: 'We’re Here To',
+                    Title: "We're Here To",
                     Title2: 'Transform',
                     Title3: 'You!',
                     Paragraph: "As learners, people can enjoy great companionship from MaxCoach mentors and educators. We can help you develop and grow at your best.",
@@ -329,7 +421,7 @@ export default {
             FinishedSessions: this.arrCounter[1],
             SatisfactionRate: this.arrCounter[2] + '%',
             round: 1,
-            delay: 2000,
+            delay: 20000,
             offset: '50%',
             easing: 'linear',
         });
@@ -371,6 +463,9 @@ export default {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        h1 {
+            font-weight: 300;
+        }
         .sub-title {
             font-weight: 700;
             font-size: 2.2rem;
@@ -380,8 +475,8 @@ export default {
             margin-top: 1rem;
         }
     }
-
 }
+
 .section {
     .content-holder {
         margin-top: 15vh;
@@ -412,6 +507,7 @@ export default {
     }
     
 }
+
 .divider {
     width: 100%;
     height: 100px;
@@ -419,9 +515,8 @@ export default {
         width: 100%;
         fill: white;
     }
-    .fill-divider {
-    }
 }
+
 .img-holder {
     position: relative;
     img {
@@ -449,6 +544,7 @@ export default {
         transform: translate(-50%, -50%);
     }
 }
+
 .counter-holder {
     max-width: 70%;
     margin: 10vh auto 0;
@@ -466,8 +562,8 @@ export default {
         font-weight: 700;
         line-height: 1.5;
     }
-
 }
+
 .card-holder {
     margin-top: 2rem;
     display: flex;
@@ -486,15 +582,38 @@ export default {
             flex-basis: 40%;
         }
     }
-  
 }
 
 .section-5 {
     padding: 6rem 0 8rem;
-   
 }
+
 .section-6 {
     padding: 0rem 0 8rem;
+}
+
+.section-newsletters {
+    max-width: 50%;
+    margin: 0 auto;
+    position: relative;
+    .icon-absolute {
+        
+        .icon-right {
+            position: absolute;
+            right: -70%;
+            top: 20%;
+        }
+        .icon-right-2 {
+            position: absolute;
+            right: -70%;
+            top: -10%;
+        }
+        .icon-left {
+            position: absolute;
+            left: -50%;
+            top: 20%;
+        }
+    }
 }
 
 
@@ -504,6 +623,7 @@ export default {
     font-weight: 700;
     color: $MainBlack;
 }
+
 .styled-text {
     display: inline;
     color: $MainGreen;
@@ -513,9 +633,15 @@ export default {
 .text-capitalize {
     text-transform: capitalize;
 }
+
 .text-center {
     text-align: center;
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .video-player-holder {
     border-radius: 3%;
     overflow: hidden;
@@ -527,6 +653,7 @@ export default {
         transform: scale(1.2);
     }
 }
+
 .call-video-player {
     cursor: pointer;
 }
@@ -547,7 +674,55 @@ export default {
     }
 }
 
-// Margin
+// Newsletter Form Formatting 
+
+.form-holder {
+    margin: 3rem 0 15vh;
+    position: relative;
+    overflow: hidden;
+    button {
+        position: absolute;
+        z-index: 0;
+        padding: 0 1rem;
+        height: 2.8rem;
+        right: 0;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: $MainGreen;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(1, 114, 86);
+            color: rgb(130, 130, 130);
+        }
+    }
+    border-radius: 5px;
+    background-color: $SearchBackgroundColor;
+    .subscribe-btn {
+        display: inline-block;
+    }
+    input {
+        border-radius: 5px;
+        width: 100%;
+        padding: 0 45px 0 20px;
+        font-size: .9rem;
+        color: $MainGreen;
+        line-height: 3;
+        background-color: transparent;
+        border: 1px solid transparent;
+        &:focus-visible {
+            outline: none;
+        }
+        &:focus {
+            border-radius: 5px;
+            border: 1px solid $MainGreen;
+    }
+        
+    }
+}
+
+// Margin & Padding
 .padding-top {
     padding-top: 15vh;
 }

@@ -10,9 +10,11 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faStar as fasStar } from '@fortawesome/free-regular-svg-icons'
 import { faCircleUser as fasCircleUser } from '@fortawesome/free-regular-svg-icons'
 import { faSearch} from '@fortawesome/free-solid-svg-icons'
+import { faArrowRightLong} from '@fortawesome/free-solid-svg-icons'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 
-library.add(faInstagram, faYoutube, faLinkedin, faTwitter, fasStar, farCartShopping, fasCircleUser, faSearch ), 
+library.add(faInstagram, faYoutube, faLinkedin, faTwitter, fasStar, farCartShopping, fasCircleUser, faSearch, faArrowRightLong ), 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 

@@ -1,22 +1,19 @@
 <template>
   <div class="card">
       <div class="img-holder">
-          <img :src="CardProp.image" alt="">
+          <img :src="BlogCardProp.image" alt="">
       </div>
       
       <div class="text-content">
             <div class="price">
-            <span>{{CardProp.price}}</span>
+            <span>{{BlogCardProp.category}}</span>
             </div>
             <div class="card-title">
-                <span>{{CardProp.title}}</span>
+                <span>{{BlogCardProp.title}}</span>
             </div>
             <div class="card-item-counter">
-                <span>{{CardProp.counter1}}</span>
-                <span>{{CardProp.counter2}}</span>
-            </div>
-            <div v-if="CardProp.cardTagShow" class="card-tag-free">
-                <span>FREE</span>
+                <span>{{BlogCardProp.counter1}}</span>
+                <span>{{BlogCardProp.counter2}} views</span>
             </div>
       </div>
       
@@ -26,11 +23,11 @@
 <script>
 
 export default {
-    name: 'CardMaxC',
+    name: 'BlogCardMaxC',
     props: {
-        CardProp: {
+        BlogCardProp: {
             image: String,
-            price: String,
+            category: String,
             title: String,
             counter1: String,
             counter2: String,
@@ -48,8 +45,7 @@ export default {
 
 .card {
     position: relative;
-    min-width: 33%;
-    background-color: $White;
+    min-width: 30%;
     text-align: start;
     padding-bottom: 4rem;
     cursor: pointer;
@@ -78,9 +74,9 @@ export default {
     }
     .price span {
         
-        color: $MainGreen;
-        font-size: 1.4rem;
-        font-weight: 700;
+        color: $StormDust;
+        font-size: 1rem;
+        font-weight: 500;
     }
     .card-title {
         color: $MainBlack;
